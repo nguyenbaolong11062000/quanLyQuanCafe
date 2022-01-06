@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quancf.SecondaryController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="158.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="246.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="190.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="94.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="131.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Tra cứu" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <TextField fx:id="sucChua" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label fx:id="lbSucChua" text="Nhập số lượng chỗ ngồi" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#switchToPrimary" text="Quay lại" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <TableView fx:id="tbBan" prefHeight="146.0" prefWidth="600.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <TextField fx:id="themSucChua" promptText="Nhập số lượng chỗ ngồi" GridPane.rowIndex="2" />
+      <Button fx:id="btCapNhat" mnemonicParsing="false" onAction="#updateBan" text="Cập nhật" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <ComboBox fx:id="themTinhTrang" prefWidth="150.0" promptText="Tình trạng" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+   </children>
+</GridPane>

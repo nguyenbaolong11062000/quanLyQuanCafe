@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quancf.DatMon">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="110.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="0.0" prefWidth="188.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="218.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="184.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Đặt món" GridPane.columnSpan="3" GridPane.halignment="CENTER" />
+      <ComboBox fx:id="cbThoiDiem" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Label text="Chọn buổi" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <TableView fx:id="tbSanPham" prefHeight="108.0" prefWidth="600.0" GridPane.columnSpan="4" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+      <Label fx:id="lbNhapTen" text="Nhập tên" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <TextField fx:id="txtKeyword" promptText="Nhập tên sản phẩm cần tìm" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="txtGia" promptText="Nhập giá" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label fx:id="lbNhapGia" text="Nhập giá" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Label text="Chọn hình thức tìm kiếm" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <ComboBox fx:id="cbHinhThuc" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#switchToPrimary" text="Trở về" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <TextField fx:id="themTen" promptText="Nhập tên sản phẩm" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <TextField fx:id="themGia" promptText="Nhập giá sản phẩm" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <HBox GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <children>
+            <ComboBox fx:id="themThoiDiem" prefHeight="25.0" prefWidth="120.0" promptText="Thời điểm bán" />
+            <ComboBox fx:id="themTinhTrang" prefHeight="25.0" prefWidth="98.0" promptText="Tình trạng" />
+         </children>
+      </HBox>
+      <HBox spacing="15.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="btThemSanPham" mnemonicParsing="false" onAction="#addSanPham" text="Thêm sản phẩm" />
+            <Button fx:id="btCapNhat" mnemonicParsing="false" onAction="#updateSanPham" text="Cập nhật" />
+         </children>
+      </HBox>
+      <Label fx:id="lbHinhThucChinhSua" text="Chọn hình thức chỉnh sửa" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <ComboBox fx:id="cbHinhThucChinhSua" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <TextField fx:id="chonTenSP" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField fx:id="chonSoLuongSP" promptText="Nhập số lượng" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="btThemMon" mnemonicParsing="false" onAction="#themMon" text="Thêm món" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+   </children>
+</GridPane>
